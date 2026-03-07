@@ -766,7 +766,7 @@
         kpi: "Extreme Class Imbalance • GAN-based Synthetic Augmentation • PCA Diagnostics",
         industry: "Finance",
         useCase: "Fraud Detection",
-        method: "Classification",
+        method: "Classification + Privacy-Preserving ML",
         dataType: "Tabular",
         maturity: "Project",
         stack: "Python, Pandas, Scikit-learn, PyTorch",
@@ -775,31 +775,30 @@
         githubUrl: "https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/fraud-detection",
         desc: "End-to-end fraud detection for highly imbalanced transactions, combining GAN-based tabular augmentation with privacy-preserving learning (DP + FL) to enable secure collaboration in regulated environments.",
         problem: [
-          "Extreme class imbalance (fraud vs non-fraud) limits model learning.",
-          "Need privacy-preserving training to reduce data exposure and support compliance.",
-          "Enable cross-institution learning without centralizing sensitive data."
+          "Extreme class imbalance between fraudulent and legitimate transactions.",
+          "Financial datasets require privacy-preserving training to limit sensitive data exposure.",
+          "Collaborative learning across institutions requires decentralized approaches such as federated learning."
         ],
         approach: [
-          "Performed consistent preprocessing (scaling/feature engineering) for stable training.",
-          "Trained a GAN to synthesize minority-class samples and reduce imbalance effects.",
-          "Integrated differential privacy mechanisms for privacy-aware model training.",
-          "Designed a federated learning workflow for decentralized collaboration.",
-          "Used PCA diagnostics to inspect feature-space structure and quality."
+          "Applied preprocessing and feature scaling for stable training..",
+          "Trained a GAN to generate synthetic minority-class transactions.",
+          "Implemented Differential Privacy to limit data leakage during model updates.",
+          "Simulated Federated Learning rounds to enable decentralized training..",
+          "Used PCA diagnostics to compare real and synthetic feature distributions."
         ],
         results: [
-          "Reproducible pipeline for imbalance-aware fraud experimentation.",
-          "Synthetic augmentation improves minority-class learning signals (add metric if available).",
-          "Privacy-preserving training design suitable for regulated deployments."
+          "Developed a reproducible pipeline for privacy-aware fraud detection experiments..",
+          "GAN-based augmentation improves representation of minority fraud samples.",
+          "Differential Privacy and Federated Learning enable privacy-preserving model training."
         ],
-        note: "Optional: Add a numeric result (e.g., fraud recall, AUC, or DP ε) for even stronger impact."
       },
       {
         id: "cs-healthcare",
-        title: "Healthcare Data Anonymization Using Traditional Techniques (k-Anonymity, l-Diversity, t-Closeness)",
+        title: "Data Anonymization Using Traditional Techniques (k-Anonymity, l-Diversity, t-Closeness)",
         kpi: "Privacy–Utility Tradeoff • Utility Retention • Baseline RandomForest",
         industry: "Healthcare",
         useCase: "Data Privacy",
-        method: "Anonymization",
+        method: "Data Anonymization",
         dataType: "Tabular",
         maturity: "Project",
         stack: "Python, Pandas, Scikit-learn",
@@ -808,22 +807,21 @@
         githubUrl: "https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/classical-anonymization",
         desc: "Evaluated classic anonymization methods against downstream ML utility to quantify privacy–utility tradeoffs and validate distributional impact in sensitive healthcare datasets.",
         problem: [
-          "Healthcare datasets contain quasi-identifiers and sensitive attributes.",
-          "Need anonymization while retaining predictive utility for analytics/ML.",
-          "Measure distribution shift and retention under different privacy controls."
+          "Tabular datasets often contain quasi-identifiers and sensitive attributes that can lead to re-identification risks.",
+          "Organizations must anonymize datasets while preserving analytical utility for machine learning tasks..",
+          "Evaluate how classical anonymization methods affect data utility and distributional properties."
         ],
         approach: [
-          "Prepared healthcare_data.csv and separated the prediction target (diagnosis).",
-          "Trained a RandomForest baseline on original data to establish utility.",
-          "Applied k-anonymity, l-diversity, and t-closeness transformations.",
-          "Compared distributions (original vs anonymized) and evaluated utility retention."
+          "Prepared the dataset and defined the prediction target (diagnosis).",
+          "Prepared the dataset and defined the prediction target (diagnosis).",
+          "Applied k-anonymity, l-diversity, and t-closeness anonymization techniques.",
+          "Compared feature distributions and evaluated downstream utility after anonymization."
         ],
         results: [
-          "Baseline utility established to benchmark anonymized variants.",
-          "Tradeoffs quantified across k-anon / l-div / t-close (add metric if available).",
-          "Distribution-shift checks validate anonymization impact."
+          "Baseline model performance established the reference utility level.",
+          "Classical anonymization methods introduce measurable privacy–utility tradeoffs.",
+          "Distributional analysis confirms the impact of anonymization on feature statistics."
         ],
-        note: "Replace the GitHub URL with your real repo."
       },
       {
         id: "cs-iot",
@@ -1173,6 +1171,7 @@
   </script>
 </body>
 </html>
+
 
 
 
