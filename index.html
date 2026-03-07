@@ -825,11 +825,11 @@
       },
       {
         id: "cs-iot",
-        title: "IoT Deep Learning-Based Anonymization using 1D Convolutional Autoencoder",
-        kpi: "Reconstruction Error • Similarity Metrics • Robustness Stress-Test (FGSM)",
+        title: "IoT Deep Learning Anonymization",
+        kpi: "1D Convolutional Autoencoder • Reconstruction Error Analysis • Similarity Metrics (MSE, Cosine, SSIM) • FGSM Adversarial Testing",
         industry: "IoT",
         useCase: "Privacy-Preserving Transformation",
-        method: "Autoencoder",
+        method: "Deep Learning (Autoencoder)",
         dataType: "Time Series",
         maturity: "Project",
         stack: "Python, PyTorch, Scikit-learn, scikit-image",
@@ -838,23 +838,22 @@
         githubUrl: "https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/smart-home-cae",
         desc: "Privacy-aware transformation of smart-home time series using a 1D convolutional autoencoder, evaluated through reconstruction/similarity metrics and downstream task utility.",
         problem: [
-          "Smart-home sensor streams can reveal sensitive user behavior patterns.",
-          "Need transformation that reduces leakage while preserving downstream utility.",
-          "Validate robustness under adversarial perturbations (FGSM)."
+          "Smart-home sensor streams may reveal sensitive behavioral patterns..",
+          "Need transformations that protect privacy while preserving analytical utility.",
+          "Evaluate robustness against adversarial perturbations.."
         ],
         approach: [
-          "Standardized sensor data and formed sliding windows for sequence learning.",
-          "Trained a 1D convolutional autoencoder (CAE) for transformation/reconstruction.",
-          "Measured privacy proxies via MSE, cosine similarity, and SSIM.",
-          "Evaluated downstream utility with classification accuracy.",
-          "Stress-tested robustness using FGSM perturbations and diagnostics."
+          "Standardized sensor signals and created sliding windows for time-series learning.",
+          "Trained a 1D Convolutional Autoencoder (CAE) for representation learning.",
+          "Measured reconstruction quality using MSE, cosine similarity, and SSIM.",
+          "Evaluated downstream task performance using classification accuracy.",
+          "Performed FGSM adversarial stress testing"
         ],
         results: [
-          "End-to-end pipeline for privacy-aware time-series transformation.",
-          "Privacy/utility evaluation framework with interpretable metrics.",
-          "Robustness assessment with adversarial stress-testing."
+          "Learned compressed representations of smart-home sensor streams.",
+          "Quantified privacy–utility tradeoffs using reconstruction metrics",
+          "Demonstrated robustness under adversarial perturbations."
         ],
-        note: "Replace the GitHub URL with your real repo."
       }
     ];
 
@@ -1171,6 +1170,7 @@
   </script>
 </body>
 </html>
+
 
 
 
