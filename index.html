@@ -3,37 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Marios Vardalachakis</title>
-  <meta name="description" content="AI & Data Case Studies, experimental visualizations, prototype tools, and publications."/>
+
+  <meta
+    name="description"
+    content="AI & Data Case Studies, experimental visualizations, prototype tools, and publications."
+  />
 
   <style>
     :root{
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #5b677a;
-      --border: rgba(15,23,42,.10);
-      --shadow: 0 16px 40px rgba(15,23,42,.08);
-      --shadow-soft: 0 10px 24px rgba(15,23,42,.06);
-      --blue: #2563eb;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#5b677a;
+      --border:rgba(15,23,42,.10);
+      --shadow:0 16px 40px rgba(15,23,42,.08);
+      --shadow-soft:0 10px 24px rgba(15,23,42,.06);
+      --blue:#2563eb;
       --blue2:#1d4ed8;
-      --chip: rgba(37,99,235,.10);
-      --radius: 18px;
-      --radius2: 22px;
-      --max: 1120px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --chip:rgba(37,99,235,.10);
+      --radius:18px;
+      --radius2:22px;
+      --max:1120px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
     }
 
-    *{box-sizing:border-box}
+    *{
+      box-sizing:border-box;
+    }
 
     body{
       margin:0;
       font-family:var(--sans);
       color:var(--text);
       background:
-        radial-gradient(900px 500px at 50% 0%, rgba(37,99,235,.12), transparent 60%),
-        radial-gradient(700px 400px at 85% 20%, rgba(29,78,216,.10), transparent 55%),
+        radial-gradient(
+          900px 500px at 50% 0%,
+          rgba(37,99,235,.12),
+          transparent 60%
+        ),
+        radial-gradient(
+          700px 400px at 85% 20%,
+          rgba(29,78,216,.10),
+          transparent 55%
+        ),
         var(--bg);
     }
 
@@ -42,7 +57,9 @@
       text-decoration:none;
     }
 
-    button,input,select{
+    button,
+    input,
+    select{
       font:inherit;
     }
 
@@ -61,7 +78,10 @@
       backdrop-filter:blur(10px);
     }
 
-    /* Header */
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
     header{
       display:flex;
       align-items:center;
@@ -113,7 +133,10 @@
       color:var(--blue2);
     }
 
-    /* Hero */
+    /* =====================================================
+       HERO
+       ===================================================== */
+
     .hero{
       padding:36px 18px 12px;
     }
@@ -127,7 +150,6 @@
       font-weight:600;
     }
 
-    /* Home hero */
     .home-hero{
       margin-top:10px;
       display:flex;
@@ -177,7 +199,10 @@
       font-weight:520;
     }
 
-    /* CV CTA */
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
     .home-cta{
       display:flex;
       gap:10px;
@@ -207,12 +232,19 @@
     }
 
     .btn.primary{
-      background:linear-gradient(180deg,rgba(37,99,235,.95),rgba(29,78,216,.98));
+      background:linear-gradient(
+        180deg,
+        rgba(37,99,235,.95),
+        rgba(29,78,216,.98)
+      );
       border-color:rgba(37,99,235,.35);
       color:#fff;
     }
 
-    /* Sections */
+    /* =====================================================
+       SECTIONS
+       ===================================================== */
+
     .section{
       padding:22px 18px 4px;
     }
@@ -223,7 +255,10 @@
       letter-spacing:-.01em;
     }
 
-    /* Library */
+    /* =====================================================
+       CASE STUDY LIBRARY
+       ===================================================== */
+
     .library-head{
       display:flex;
       align-items:center;
@@ -267,7 +302,11 @@
       padding:14px 14px 10px;
       border-bottom:1px solid var(--border);
       background:
-        radial-gradient(450px 160px at 30% 0%,rgba(37,99,235,.14),transparent 60%),
+        radial-gradient(
+          450px 160px at 30% 0%,
+          rgba(37,99,235,.14),
+          transparent 60%
+        ),
         rgba(255,255,255,.60);
     }
 
@@ -334,7 +373,10 @@
       padding-top:12px;
     }
 
-    /* Skills */
+    /* =====================================================
+       SKILLS
+       ===================================================== */
+
     .skills-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -372,7 +414,10 @@
       font-weight:700;
     }
 
-    /* Projects */
+    /* =====================================================
+       PROJECTS
+       ===================================================== */
+
     .projects-grid{
       display:grid;
       grid-template-columns:repeat(12,1fr);
@@ -401,7 +446,11 @@
       padding:14px 14px 10px;
       border-bottom:1px solid var(--border);
       background:
-        radial-gradient(450px 160px at 30% 0%,rgba(37,99,235,.14),transparent 60%),
+        radial-gradient(
+          450px 160px at 30% 0%,
+          rgba(37,99,235,.14),
+          transparent 60%
+        ),
         rgba(255,255,255,.60);
     }
 
@@ -467,12 +516,19 @@
     }
 
     .plink.primary{
-      background:linear-gradient(180deg,rgba(37,99,235,.95),rgba(29,78,216,.98));
+      background:linear-gradient(
+        180deg,
+        rgba(37,99,235,.95),
+        rgba(29,78,216,.98)
+      );
       border-color:rgba(37,99,235,.35);
       color:#fff;
     }
 
-    /* Publications */
+    /* =====================================================
+       PUBLICATIONS
+       ===================================================== */
+
     .publications-container{
       max-width:900px;
       margin:0 auto;
@@ -579,8 +635,7 @@
     }
 
     /* =====================================================
-       CASE STUDY MODAL
-       Mobile-safe link handling
+       MODAL
        ===================================================== */
 
     .modal{
@@ -619,7 +674,11 @@
       padding:16px 18px;
       border-bottom:1px solid var(--border);
       background:
-        radial-gradient(700px 220px at 20% 0%,rgba(37,99,235,.14),transparent 60%),
+        radial-gradient(
+          700px 220px at 20% 0%,
+          rgba(37,99,235,.14),
+          transparent 60%
+        ),
         rgba(255,255,255,.75);
     }
 
@@ -649,8 +708,6 @@
       font-size:12px;
       color:rgba(15,23,42,.84);
       transition:.12s ease;
-
-      /* Important for touch devices */
       cursor:pointer;
       touch-action:manipulation;
       -webkit-tap-highlight-color:rgba(37,99,235,.15);
@@ -669,7 +726,11 @@
     }
 
     .linkbtn.primary{
-      background:linear-gradient(180deg,rgba(37,99,235,.95),rgba(29,78,216,.98));
+      background:linear-gradient(
+        180deg,
+        rgba(37,99,235,.95),
+        rgba(29,78,216,.98)
+      );
       border-color:rgba(37,99,235,.35);
       color:#fff;
     }
@@ -739,7 +800,10 @@
       margin-top:10px;
     }
 
-    /* Footer */
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
     footer{
       padding:18px;
       color:rgba(15,23,42,.62);
@@ -753,8 +817,12 @@
       gap:10px;
     }
 
-    /* Responsive */
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
     @media (max-width:980px){
+
       .cards{
         grid-template-columns:1fr;
       }
@@ -782,10 +850,11 @@
       .home-text{
         text-align:justify;
       }
+
     }
 
-    /* Extra mobile adjustments for Case Studies */
     @media (max-width:600px){
+
       .modal{
         padding:10px;
         align-items:flex-start;
@@ -829,54 +898,127 @@
       .bullets{
         font-size:13px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
   <div class="wrap">
+
     <div class="shell">
 
+      <!-- =====================================================
+           HEADER
+           ===================================================== -->
+
       <header>
-        <a class="brand" href="#" data-page="home" aria-label="Home">
+
+        <a
+          class="brand"
+          href="#"
+          data-page="home"
+          aria-label="Home"
+        >
+
           <div>
-            <b>Marios Vardalachakis</b><br />
-            <span>AI Engineer </span>
+
+            <b>
+              Marios Vardalachakis
+            </b>
+
+            <br />
+
+            <span>
+              AI Engineer
+            </span>
+
           </div>
+
         </a>
 
         <nav id="nav">
-          <a href="#" class="active" data-page="home">Home</a>
-          <a href="#" data-page="case-studies">Case Studies</a>
-          <a href="#" data-page="skills">Skills</a>
-          <a href="#" data-page="lab">Projects</a>
-          <a href="#" data-page="publications">Publications</a>
+
+          <a
+            href="#"
+            class="active"
+            data-page="home"
+          >
+            Home
+          </a>
+
+          <a
+            href="#"
+            data-page="case-studies"
+          >
+            Case Studies
+          </a>
+
+          <a
+            href="#"
+            data-page="skills"
+          >
+            Skills
+          </a>
+
+          <a
+            href="#"
+            data-page="lab"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#"
+            data-page="publications"
+          >
+            Publications
+          </a>
+
         </nav>
+
       </header>
+
 
       <main id="content">
 
-        <!-- HERO -->
-        <section class="hero" id="homeHero">
+        <!-- =====================================================
+             HOME
+             ===================================================== -->
 
-          <p id="heroMsg" style="display:none;"></p>
+        <section
+          class="hero"
+          id="homeHero"
+        >
+
+          <p
+            id="heroMsg"
+            style="display:none;"
+          ></p>
+
 
           <div id="homeIntro">
 
             <div class="home-hero">
 
               <div class="avatar-wrap">
+
                 <img
                   class="avatar"
                   src="images/marios.jpg"
                   alt="marios"
                 />
+
               </div>
+
 
               <div class="home-text">
 
-                <p>Building AI systems that are intelligent, trustworthy, and deployable.</p>
+                <p>
+                  Building AI systems that are intelligent, trustworthy, and deployable.
+                </p>
 
                 <p>
                   I design and implement AI-powered software systems that combine machine learning, production-grade engineering, and privacy-aware data architectures.
@@ -898,7 +1040,9 @@
                   My goal is to build AI systems that are not only intelligent, but also reliable, explainable, secure, and practical to deploy.
                 </p>
 
+
                 <div class="home-cta">
+
                   <a
                     class="btn primary"
                     href="pdf/marios_vardalachakis.pdf"
@@ -906,70 +1050,151 @@
                   >
                     ⬇ Download CV (PDF)
                   </a>
+
                 </div>
 
               </div>
+
             </div>
+
           </div>
+
         </section>
 
-        <!-- PROJECTS -->
-        <section class="section" id="projects" style="display:none;">
-          <h2 style="margin:0">Projects</h2>
-          <div id="projectsGrid" class="projects-grid"></div>
+
+        <!-- =====================================================
+             PROJECTS
+             ===================================================== -->
+
+        <section
+          class="section"
+          id="projects"
+          style="display:none;"
+        >
+
+          <h2 style="margin:0">
+            Projects
+          </h2>
+
+          <div
+            id="projectsGrid"
+            class="projects-grid"
+          ></div>
+
         </section>
 
-        <!-- CASE STUDY LIBRARY -->
-        <section class="section" id="library" style="display:none;">
+
+        <!-- =====================================================
+             CASE STUDIES
+             ===================================================== -->
+
+        <section
+          class="section"
+          id="library"
+          style="display:none;"
+        >
 
           <div class="library-head">
-            <h2 style="margin:0">Case Study Library</h2>
+
+            <h2 style="margin:0">
+              Case Study Library
+            </h2>
 
             <div class="lib-search">
+
               <input
                 id="q"
                 class="input"
                 placeholder="Search case studies..."
               />
 
-              <select id="fIndustry" class="select" aria-label="Industry">
-                <option value="">Industry</option>
+              <select
+                id="fIndustry"
+                class="select"
+                aria-label="Industry"
+              >
+                <option value="">
+                  Industry
+                </option>
               </select>
 
-              <select id="fUseCase" class="select" aria-label="Use Case">
-                <option value="">Use Case</option>
+              <select
+                id="fUseCase"
+                class="select"
+                aria-label="Use Case"
+              >
+                <option value="">
+                  Use Case
+                </option>
               </select>
 
-              <select id="fMethod" class="select" aria-label="Method">
-                <option value="">Method</option>
+              <select
+                id="fMethod"
+                class="select"
+                aria-label="Method"
+              >
+                <option value="">
+                  Method
+                </option>
               </select>
 
-              <select id="fData" class="select" aria-label="Data Type">
-                <option value="">Data Type</option>
+              <select
+                id="fData"
+                class="select"
+                aria-label="Data Type"
+              >
+                <option value="">
+                  Data Type
+                </option>
               </select>
 
-              <button id="clear" class="clear">
+              <button
+                id="clear"
+                class="clear"
+              >
                 Clear Filters
               </button>
+
             </div>
+
           </div>
 
-          <div class="cards" id="cards"></div>
+
+          <div
+            class="cards"
+            id="cards"
+          ></div>
 
         </section>
 
-        <!-- PUBLICATIONS -->
-        <section class="section" id="publications" style="display:none;">
+
+        <!-- =====================================================
+             PUBLICATIONS
+             ===================================================== -->
+
+        <section
+          class="section"
+          id="publications"
+          style="display:none;"
+        >
 
           <div class="publications-container">
 
+
+            <!-- JOURNALS -->
+
             <div class="pub-category">
 
-              <h3>📰 Publications in Journals</h3>
+              <h3>
+                📰 Publications in Journals
+              </h3>
+
 
               <div class="pub-item">
 
-                <span class="pub-year">2024</span>
+                <span class="pub-year">
+                  2024
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, N. Papadakis, M. Tampouratzis
@@ -1000,44 +1225,86 @@
 
             </div>
 
+
+            <!-- CONFERENCES -->
+
             <div class="pub-category">
 
-              <h3>🎤 Publications in Conferences</h3>
+              <h3>
+                🎤 Publications in Conferences
+              </h3>
+
+
+              <!-- 2026 EEITE - Privacy-Aware ML -->
 
               <div class="pub-item">
 
-                <span class="pub-year">2026</span>
+                <span class="pub-year">
+                  2026
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, M. Vasilakis, M. Tampouratzis
                 </div>
 
                 <div class="pub-title">
-                  "A Comprehensive Analysis of Features, Benefits, Installation Issues, and Suggested Solutions of SIEM Systems"
+                  "A Privacy-Aware Machine Learning Model for IoT Ecosystems"
                 </div>
 
                 <div class="pub-venue">
-                  Computer Sciences & Mathematics Forum (MDPI)
+                  2026 7th International Conference in Electronic Engineering & Information Technology (EEITE)
                 </div>
 
                 <div class="pub-location">
-                  Volume 12, Issue 1, Article 18 • 2026
+                  2026
                 </div>
 
                 <a
-                  href="https://doi.org/10.3390/cmsf2025012018"
+                  href="https://doi.org/10.1109/EEITE69609.2026.11679641"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="pub-link"
                 >
-                  DOI: 10.3390/cmsf2025012018
+                  DOI: 10.1109/EEITE69609.2026.11679641
                 </a>
 
               </div>
 
+
+              <!-- 2026 EEITE - Security Framework -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2025</span>
+                <span class="pub-year">
+                  2026
+                </span>
+
+                <div class="pub-authors">
+                  M. Vasilakis, A. Peratikou, M. Vardalachakis, M. Tampouratzis, N. Tampouratzis
+                </div>
+
+                <div class="pub-title">
+                  "An Integrated Security Framework for the Application Lifecycle using SBOM, Wazuh and DefectDojo"
+                </div>
+
+                <div class="pub-venue">
+                  2026 7th International Conference in Electronic Engineering & Information Technology (EEITE)
+                </div>
+
+                <div class="pub-location">
+                  2026
+                </div>
+
+              </div>
+
+
+              <!-- 2025 InviseeAI -->
+
+              <div class="pub-item">
+
+                <span class="pub-year">
+                  2025
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, A. Siatras, C. Kalloniatis
@@ -1066,9 +1333,14 @@
 
               </div>
 
+
+              <!-- 2025 ICCTA -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2025</span>
+                <span class="pub-year">
+                  2025
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, C. Kalloniatis
@@ -1092,9 +1364,14 @@
 
               </div>
 
+
+              <!-- 2024 CIEES -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2024</span>
+                <span class="pub-year">
+                  2024
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, M. Tampouratzis
@@ -1123,9 +1400,14 @@
 
               </div>
 
+
+              <!-- 2024 EEITE -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2024</span>
+                <span class="pub-year">
+                  2024
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, M. Tampouratzis, M. Vasilakis, N. Papadakis
@@ -1154,9 +1436,14 @@
 
               </div>
 
+
+              <!-- 2024 CircuitLib -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2024</span>
+                <span class="pub-year">
+                  2024
+                </span>
 
                 <div class="pub-authors">
                   M. Tampouratzis, M. Vasilakis, M. Vardalachakis, M. Raftaki, G. Adamidis, M. Antonidakis
@@ -1185,9 +1472,14 @@
 
               </div>
 
+
+              <!-- 2023 ICAMCS -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2023</span>
+                <span class="pub-year">
+                  2023
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, H. Kondylakis, M. Tampouratzis, N. Papadakis, N. Mastorakis
@@ -1216,9 +1508,14 @@
 
               </div>
 
+
+              <!-- 2019 ICT4AWE -->
+
               <div class="pub-item">
 
-                <span class="pub-year">2019</span>
+                <span class="pub-year">
+                  2019
+                </span>
 
                 <div class="pub-authors">
                   M. Vardalachakis, H. Kondylakis, L. Koumakis, A. Kouroubali, D. G. Katehakis
@@ -1248,22 +1545,35 @@
               </div>
 
             </div>
+
           </div>
 
         </section>
 
       </main>
 
+
+      <!-- =====================================================
+           FOOTER
+           ===================================================== -->
+
       <footer>
+
         <div>
           © <span id="year"></span> Marios Vardalachakis
         </div>
+
       </footer>
 
     </div>
+
   </div>
 
-  <!-- CASE STUDY MODAL -->
+
+  <!-- =====================================================
+       CASE STUDY MODAL
+       ===================================================== -->
+
   <div
     class="modal"
     id="modal"
@@ -1273,7 +1583,10 @@
     aria-modal="true"
   >
 
-    <div class="modal-card" id="modalCard">
+    <div
+      class="modal-card"
+      id="modalCard"
+    >
 
       <div class="modal-head">
 
@@ -1306,6 +1619,7 @@
 
       </div>
 
+
       <div class="modal-body">
 
         <div class="cols">
@@ -1328,6 +1642,7 @@
 
           </div>
 
+
           <div class="block">
 
             <h4>
@@ -1340,6 +1655,7 @@
             ></div>
 
           </div>
+
 
           <div
             class="block"
@@ -1356,6 +1672,7 @@
             ></ul>
 
           </div>
+
 
           <div
             class="block"
@@ -1378,18 +1695,20 @@
       </div>
 
     </div>
+
   </div>
+
 
   <script>
 
     /* =====================================================
-       CASE STUDIES
+       CASE STUDIES DATA
        ===================================================== */
 
     const CASES = [
 
       {
-        id: "cs-fraud-ml",
+        id:"cs-fraud-ml",
 
         title:
           "Fraud Detection using GAN-based Augmentation, Differential Privacy & Federated Learning",
@@ -1397,28 +1716,23 @@
         kpi:
           "Extreme Class Imbalance • GAN-based Synthetic Augmentation • Differential Privacy • Federated Learning",
 
-        industry:
-          "Finance",
+        industry:"Finance",
 
-        useCase:
-          "Fraud Detection",
+        useCase:"Fraud Detection",
 
         method:
           "Classification + Privacy-Preserving ML",
 
-        dataType:
-          "Tabular",
+        dataType:"Tabular",
 
-        maturity:
-          "Project",
+        maturity:"Project",
 
         stack:
           "Python, Pandas, Scikit-learn, PyTorch",
 
-        deployment:
-          "Offline",
+        deployment:"Offline",
 
-        tags: [
+        tags:[
           "creditcard.csv",
           "StandardScaler",
           "GAN",
@@ -1432,37 +1746,30 @@
         desc:
           "End-to-end fraud detection for highly imbalanced transactions, combining GAN-based tabular augmentation with privacy-preserving learning (DP + FL) to enable secure collaboration in regulated environments.",
 
-        problem: [
+        problem:[
           "Extreme class imbalance between fraudulent and legitimate transactions.",
-
           "Financial datasets require privacy-preserving training to limit sensitive data exposure.",
-
           "Collaborative learning across institutions requires decentralized approaches such as federated learning."
         ],
 
-        approach: [
+        approach:[
           "Applied preprocessing and feature scaling for stable training.",
-
           "Trained a GAN to generate synthetic minority-class transactions.",
-
           "Implemented Differential Privacy to limit data leakage during model updates.",
-
           "Simulated Federated Learning rounds to enable decentralized training.",
-
           "Used PCA diagnostics to compare real and synthetic feature distributions."
         ],
 
-        results: [
+        results:[
           "Developed a reproducible pipeline for privacy-aware fraud detection experiments.",
-
           "GAN-based augmentation improves representation of minority fraud samples.",
-
           "Differential Privacy and Federated Learning enable privacy-preserving model training."
         ]
       },
 
+
       {
-        id: "cs-healthcare",
+        id:"cs-healthcare",
 
         title:
           "Data Anonymization Using Traditional Techniques (k-Anonymity, l-Diversity, t-Closeness)",
@@ -1470,28 +1777,22 @@
         kpi:
           "Privacy–Utility Tradeoff • Utility Retention • Baseline RandomForest",
 
-        industry:
-          "Healthcare",
+        industry:"Healthcare",
 
-        useCase:
-          "Data Privacy",
+        useCase:"Data Privacy",
 
-        method:
-          "Data Anonymization",
+        method:"Data Anonymization",
 
-        dataType:
-          "Tabular",
+        dataType:"Tabular",
 
-        maturity:
-          "Project",
+        maturity:"Project",
 
         stack:
           "Python, Pandas, Scikit-learn",
 
-        deployment:
-          "Offline",
+        deployment:"Offline",
 
-        tags: [
+        tags:[
           "healthcare_data.csv",
           "RandomForest",
           "k-Anonymity",
@@ -1505,33 +1806,28 @@
         desc:
           "Evaluated classic anonymization methods against downstream ML utility to quantify privacy–utility tradeoffs and validate distributional impact in sensitive healthcare datasets.",
 
-        problem: [
+        problem:[
           "Tabular datasets often contain quasi-identifiers and sensitive attributes that can lead to re-identification risks.",
-
           "Organizations must anonymize datasets while preserving analytical utility for machine learning tasks.",
-
           "Evaluate how classical anonymization methods affect data utility and distributional properties."
         ],
 
-        approach: [
+        approach:[
           "Prepared the dataset and defined the prediction target (diagnosis).",
-
           "Applied k-anonymity, l-diversity, and t-closeness anonymization techniques.",
-
           "Compared feature distributions and evaluated downstream utility after anonymization."
         ],
 
-        results: [
+        results:[
           "Baseline model performance established the reference utility level.",
-
           "Classical anonymization methods introduce measurable privacy–utility tradeoffs.",
-
           "Distributional analysis confirms the impact of anonymization on feature statistics."
         ]
       },
 
+
       {
-        id: "cs-iot",
+        id:"cs-iot",
 
         title:
           "IoT Deep Learning Anonymization",
@@ -1539,8 +1835,7 @@
         kpi:
           "1D Convolutional Autoencoder • Reconstruction Error Analysis • Similarity Metrics (MSE, Cosine, SSIM) • FGSM Adversarial Testing",
 
-        industry:
-          "IoT",
+        industry:"IoT",
 
         useCase:
           "Privacy-Preserving Transformation",
@@ -1551,16 +1846,14 @@
         dataType:
           "Time Series",
 
-        maturity:
-          "Project",
+        maturity:"Project",
 
         stack:
           "Python, PyTorch, Scikit-learn, scikit-image",
 
-        deployment:
-          "Offline",
+        deployment:"Offline",
 
-        tags: [
+        tags:[
           "Sliding Windows",
           "1D CAE",
           "MSE",
@@ -1575,31 +1868,23 @@
         desc:
           "Privacy-aware transformation of smart-home time series using a 1D convolutional autoencoder, evaluated through reconstruction/similarity metrics and downstream task utility.",
 
-        problem: [
+        problem:[
           "Smart-home sensor streams may reveal sensitive behavioral patterns.",
-
           "Need transformations that protect privacy while preserving analytical utility.",
-
           "Evaluate robustness against adversarial perturbations."
         ],
 
-        approach: [
+        approach:[
           "Standardized sensor signals and created sliding windows for time-series learning.",
-
           "Trained a 1D Convolutional Autoencoder (CAE) for representation learning.",
-
           "Measured reconstruction quality using MSE, cosine similarity, and SSIM.",
-
           "Evaluated downstream task performance using classification accuracy.",
-
           "Performed FGSM adversarial stress testing."
         ],
 
-        results: [
+        results:[
           "Learned compressed representations of smart-home sensor streams.",
-
           "Quantified privacy–utility tradeoffs using reconstruction metrics.",
-
           "Demonstrated robustness under adversarial perturbations."
         ]
       }
@@ -1611,86 +1896,95 @@
        DEFAULT PROJECT IMAGE
        ===================================================== */
 
-    const DEFAULT_PROJECT_IMAGE = `data:image/svg+xml;charset=UTF-8,${
-      encodeURIComponent(`
-        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
-
-          <defs>
-            <linearGradient
-              id="g"
-              x1="0"
-              x2="1"
-              y1="0"
-              y2="1"
-            >
-              <stop
-                offset="0"
-                stop-color="#2563eb"
-                stop-opacity="0.22"
-              />
-
-              <stop
-                offset="1"
-                stop-color="#1d4ed8"
-                stop-opacity="0.08"
-              />
-            </linearGradient>
-          </defs>
-
-          <rect
+    const DEFAULT_PROJECT_IMAGE =
+      `data:image/svg+xml;charset=UTF-8,${
+        encodeURIComponent(`
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
             width="1200"
             height="600"
-            fill="#ffffff"
-          />
+          >
 
-          <rect
-            width="1200"
-            height="600"
-            fill="url(#g)"
-          />
+            <defs>
 
-          <circle
-            cx="240"
-            cy="180"
-            r="140"
-            fill="#2563eb"
-            fill-opacity="0.10"
-          />
+              <linearGradient
+                id="g"
+                x1="0"
+                x2="1"
+                y1="0"
+                y2="1"
+              >
 
-          <circle
-            cx="980"
-            cy="120"
-            r="180"
-            fill="#1d4ed8"
-            fill-opacity="0.10"
-          />
+                <stop
+                  offset="0"
+                  stop-color="#2563eb"
+                  stop-opacity="0.22"
+                />
 
-          <circle
-            cx="920"
-            cy="460"
-            r="220"
-            fill="#2563eb"
-            fill-opacity="0.06"
-          />
+                <stop
+                  offset="1"
+                  stop-color="#1d4ed8"
+                  stop-opacity="0.08"
+                />
 
-        </svg>
-      `)
-    }`;
+              </linearGradient>
+
+            </defs>
+
+            <rect
+              width="1200"
+              height="600"
+              fill="#ffffff"
+            />
+
+            <rect
+              width="1200"
+              height="600"
+              fill="url(#g)"
+            />
+
+            <circle
+              cx="240"
+              cy="180"
+              r="140"
+              fill="#2563eb"
+              fill-opacity="0.10"
+            />
+
+            <circle
+              cx="980"
+              cy="120"
+              r="180"
+              fill="#1d4ed8"
+              fill-opacity="0.10"
+            />
+
+            <circle
+              cx="920"
+              cy="460"
+              r="220"
+              fill="#2563eb"
+              fill-opacity="0.06"
+            />
+
+          </svg>
+        `)
+      }`;
 
 
     /* =====================================================
-       PROJECTS
+       PROJECTS DATA
        ===================================================== */
 
     const PROJECTS = [
 
       {
-        id: "p1",
+        id:"p1",
 
         title:
           "InviseeAI: Advanced Healthcare Data Anonymization Platform",
 
-        tags: [
+        tags:[
           "AI",
           "Dashboard",
           "GDPR"
@@ -1702,23 +1996,22 @@
         repoUrl:
           "https://github.com/mariosggg/InviseeAi",
 
-        liveUrl:
-          "",
+        liveUrl:"",
 
-        paperUrl:
-          "",
+        paperUrl:"",
 
         imageUrl:
           "images/1.png"
       },
 
+
       {
-        id: "p2",
+        id:"p2",
 
         title:
           "ShinyAnonymizer: A Tool for Anonymizing Health Data",
 
-        tags: [
+        tags:[
           "Privacy",
           "ML",
           "Pipeline"
@@ -1730,23 +2023,22 @@
         repoUrl:
           "https://github.com/mariosggg/ShinyAnonymizer",
 
-        liveUrl:
-          "",
+        liveUrl:"",
 
-        paperUrl:
-          "",
+        paperUrl:"",
 
         imageUrl:
           "images/2.png"
       },
 
+
       {
-        id: "p3",
+        id:"p3",
 
         title:
           "Epsilon Ontology Evaluation System",
 
-        tags: [
+        tags:[
           "NLP",
           "Security"
         ],
@@ -1757,23 +2049,22 @@
         repoUrl:
           "https://mariosggg.github.io/Epsilon_Ontology_Evaluation_System/",
 
-        liveUrl:
-          "",
+        liveUrl:"",
 
-        paperUrl:
-          "",
+        paperUrl:"",
 
         imageUrl:
           "images/3.png"
       },
 
+
       {
-        id: "p4",
+        id:"p4",
 
         title:
           "Interactive Cybercrime Dashboard",
 
-        tags: [
+        tags:[
           "Privacy",
           "Analytics",
           "Compliance"
@@ -1785,23 +2076,22 @@
         repoUrl:
           "https://mariosggg.github.io/IncidentResponse/",
 
-        liveUrl:
-          "",
+        liveUrl:"",
 
-        paperUrl:
-          "",
+        paperUrl:"",
 
         imageUrl:
           "images/5.png"
       },
 
+
       {
-        id: "p5",
+        id:"p5",
 
         title:
           "IIoT Malware Intelligence Dashboard",
 
-        tags: [
+        tags:[
           "AI",
           "Security",
           "Monitoring"
@@ -1813,11 +2103,9 @@
         repoUrl:
           "https://mariosggg.github.io/IotMalware_Dashboard/",
 
-        liveUrl:
-          "",
+        liveUrl:"",
 
-        paperUrl:
-          "",
+        paperUrl:"",
 
         imageUrl:
           "images/6.png"
@@ -1832,14 +2120,14 @@
 
     const SKILLS = {
 
-      "Programming Languages": [
+      "Programming Languages":[
         "Python",
         "R",
         "JavaScript",
         "SQL"
       ],
 
-      "ML/AI Frameworks": [
+      "ML/AI Frameworks":[
         "TensorFlow",
         "PyTorch",
         "Scikit-learn",
@@ -1847,7 +2135,7 @@
         "LightGBM"
       ],
 
-      "Data Tools": [
+      "Data Tools":[
         "Pandas",
         "NumPy",
         "Matplotlib",
@@ -1857,7 +2145,7 @@
         "Dc.js"
       ],
 
-      "Cloud & DevOps": [
+      "Cloud & DevOps":[
         "AWS",
         "Google Cloud",
         "Docker",
@@ -1865,7 +2153,7 @@
         "CI/CD"
       ],
 
-      "Soft Skills": [
+      "Soft Skills":[
         "Storytelling",
         "Stakeholder Management",
         "Technical Writing"
@@ -1880,25 +2168,25 @@
 
     const PAGES = {
 
-      home: {
+      home:{
         message:null
       },
 
-      "case-studies": {
+      "case-studies":{
         message:null
       },
 
-      skills: {
+      skills:{
         message:
           "My technical expertise and professional toolkit."
       },
 
-      lab: {
+      lab:{
         message:
           "Selected projects & prototypes (add your work below)."
       },
 
-      publications: {
+      publications:{
         message:
           "My research papers, conference presentations, and academic contributions."
       }
@@ -1910,11 +2198,15 @@
        HELPERS
        ===================================================== */
 
-    const $ = (s) =>
-      document.querySelector(s);
+    const $ =
+      (s) =>
+        document.querySelector(s);
 
-    const $$ = (s) =>
-      Array.from(document.querySelectorAll(s));
+    const $$ =
+      (s) =>
+        Array.from(
+          document.querySelectorAll(s)
+        );
 
 
     function escapeHtml(s){
@@ -1937,7 +2229,10 @@
     function escapeAttr(s){
 
       return String(s ?? "")
-        .replace(/"/g,'&quot;');
+        .replace(
+          /"/g,
+          '&quot;'
+        );
 
     }
 
@@ -1959,9 +2254,12 @@
         .slice(0,4)
         .map(
           t =>
-            `<span class="tag">${escapeHtml(t)}</span>`
+            `<span class="tag">
+              ${escapeHtml(t)}
+             </span>`
         )
         .join("");
+
 
       return `
 
@@ -1984,6 +2282,7 @@
             </div>
 
           </div>
+
 
           <div class="body">
 
@@ -2024,7 +2323,7 @@
 
 
     /* =====================================================
-       RENDER CASE STUDIES
+       RENDER LIBRARY
        ===================================================== */
 
     function renderLibrary(){
@@ -2036,6 +2335,7 @@
         return;
       }
 
+
       cards.innerHTML =
         CASES
           .map(cardHTML)
@@ -2043,51 +2343,43 @@
 
 
       $$("#cards .card")
-        .forEach(el => {
+        .forEach(
+          el => {
 
-          el.addEventListener(
-            "click",
-            (e) => {
-
-              /*
-               * Only open the Case Study when the card itself
-               * is clicked. This prevents accidental interaction
-               * with links inside the modal.
-               */
-
-              openModal(
-                el.dataset.id
-              );
-
-            }
-          );
-
-
-          /*
-           * Keyboard accessibility
-           */
-
-          el.addEventListener(
-            "keydown",
-            (e) => {
-
-              if(
-                e.key === "Enter" ||
-                e.key === " "
-              ){
-
-                e.preventDefault();
+            el.addEventListener(
+              "click",
+              () => {
 
                 openModal(
                   el.dataset.id
                 );
 
               }
+            );
 
-            }
-          );
 
-        });
+            el.addEventListener(
+              "keydown",
+              (e) => {
+
+                if(
+                  e.key === "Enter" ||
+                  e.key === " "
+                ){
+
+                  e.preventDefault();
+
+                  openModal(
+                    el.dataset.id
+                  );
+
+                }
+
+              }
+            );
+
+          }
+        );
 
     }
 
@@ -2103,9 +2395,12 @@
           .slice(0,6)
           .map(
             t =>
-              `<span class="tag">${escapeHtml(t)}</span>`
+              `<span class="tag">
+                ${escapeHtml(t)}
+               </span>`
           )
           .join("");
+
 
       const imgSrc =
         p.imageUrl
@@ -2193,6 +2488,7 @@
 
           </div>
 
+
           <div class="body">
 
             <p class="desc">
@@ -2201,10 +2497,12 @@
 
             ${
               links.length
-                ? `<div class="project-links">
+                ?
+                  `<div class="project-links">
                     ${links.join("")}
                    </div>`
-                : ``
+                :
+                  ``
             }
 
           </div>
@@ -2229,6 +2527,7 @@
         return;
       }
 
+
       grid.innerHTML =
         PROJECTS
           .map(projectHTML)
@@ -2247,6 +2546,7 @@
         `<h2 style="margin:0 0 12px">
           My Technical Skills
         </h2>`;
+
 
       html +=
         `<div class="skills-grid">`;
@@ -2290,13 +2590,14 @@
       html +=
         `</div>`;
 
+
       return html;
 
     }
 
 
     /* =====================================================
-       OPEN CASE STUDY MODAL
+       OPEN MODAL
        ===================================================== */
 
     function openModal(id){
@@ -2305,6 +2606,7 @@
         CASES.find(
           x => x.id === id
         );
+
 
       if(!c){
         return;
@@ -2326,17 +2628,12 @@
           .join("");
 
 
-      /*
-       * GitHub link
-       *
-       * Important:
-       * - target="_blank" is retained
-       * - onclick stops the event from bubbling
-       * - touch-action is enabled through CSS
-       */
-
       const links = [];
 
+
+      /*
+       * Mobile-safe GitHub link
+       */
 
       if(c.githubUrl){
 
@@ -2367,7 +2664,9 @@
         (c.problem || [])
           .map(
             x =>
-              `<li>${escapeHtml(x)}</li>`
+              `<li>
+                ${escapeHtml(x)}
+               </li>`
           )
           .join("");
 
@@ -2376,7 +2675,9 @@
         (c.approach || [])
           .map(
             x =>
-              `<li>${escapeHtml(x)}</li>`
+              `<li>
+                ${escapeHtml(x)}
+               </li>`
           )
           .join("");
 
@@ -2385,7 +2686,9 @@
         (c.results || [])
           .map(
             x =>
-              `<li>${escapeHtml(x)}</li>`
+              `<li>
+                ${escapeHtml(x)}
+               </li>`
           )
           .join("");
 
@@ -2396,29 +2699,69 @@
 
       $("#mSnapshot").innerHTML = `
 
-        <div>Industry</div>
-        <div>${escapeHtml(c.industry)}</div>
+        <div>
+          Industry
+        </div>
 
-        <div>Use case</div>
-        <div>${escapeHtml(c.useCase)}</div>
+        <div>
+          ${escapeHtml(c.industry)}
+        </div>
 
-        <div>Method</div>
-        <div>${escapeHtml(c.method)}</div>
+        <div>
+          Use case
+        </div>
 
-        <div>Data type</div>
-        <div>${escapeHtml(c.dataType)}</div>
+        <div>
+          ${escapeHtml(c.useCase)}
+        </div>
 
-        <div>Highlight</div>
-        <div>${escapeHtml(c.kpi)}</div>
+        <div>
+          Method
+        </div>
 
-        <div>Tech stack</div>
-        <div>${escapeHtml(c.stack)}</div>
+        <div>
+          ${escapeHtml(c.method)}
+        </div>
 
-        <div>Deployment</div>
-        <div>${escapeHtml(c.deployment)}</div>
+        <div>
+          Data type
+        </div>
 
-        <div>Maturity</div>
-        <div>${escapeHtml(c.maturity)}</div>
+        <div>
+          ${escapeHtml(c.dataType)}
+        </div>
+
+        <div>
+          Highlight
+        </div>
+
+        <div>
+          ${escapeHtml(c.kpi)}
+        </div>
+
+        <div>
+          Tech stack
+        </div>
+
+        <div>
+          ${escapeHtml(c.stack)}
+        </div>
+
+        <div>
+          Deployment
+        </div>
+
+        <div>
+          ${escapeHtml(c.deployment)}
+        </div>
+
+        <div>
+          Maturity
+        </div>
+
+        <div>
+          ${escapeHtml(c.maturity)}
+        </div>
 
       `;
 
@@ -2435,22 +2778,15 @@
         );
 
 
-      /*
-       * Prevent body/card interactions from interfering
-       * with the modal on touch devices.
-       */
-
       document.body.style.overflow =
         "hidden";
 
 
-      /*
-       * Focus close button after modal opens.
-       */
-
       setTimeout(
         () => {
+
           $("#closeModal")?.focus();
+
         },
         50
       );
@@ -2521,22 +2857,28 @@
 
 
       if(homeIntro)
-        homeIntro.style.display = "none";
+        homeIntro.style.display =
+          "none";
 
       if(heroMsg)
-        heroMsg.style.display = "none";
+        heroMsg.style.display =
+          "none";
 
       if(library)
-        library.style.display = "none";
+        library.style.display =
+          "none";
 
       if(publications)
-        publications.style.display = "none";
+        publications.style.display =
+          "none";
 
       if(projects)
-        projects.style.display = "none";
+        projects.style.display =
+          "none";
 
       if(existingSkills)
-        existingSkills.style.display = "none";
+        existingSkills.style.display =
+          "none";
 
 
       if(page === "home"){
@@ -2662,9 +3004,7 @@
         new Date().getFullYear();
 
 
-      /*
-       * ESC closes modal
-       */
+      /* ESC closes modal */
 
       window.addEventListener(
         "keydown",
@@ -2678,9 +3018,7 @@
       );
 
 
-      /*
-       * Close button
-       */
+      /* Close button */
 
       $("#closeModal")
         .addEventListener(
@@ -2697,10 +3035,7 @@
 
 
       /*
-       * Modal background click.
-       *
-       * Only the actual dark background closes it.
-       * Clicking the modal card or GitHub button does NOT.
+       * Clicking only the dark background closes modal.
        */
 
       $("#modal")
@@ -2717,25 +3052,23 @@
 
 
       /*
-       * IMPORTANT:
-       * Do not allow clicks/touches inside the modal
-       * content to bubble to the modal background.
+       * Prevent modal content clicks from reaching
+       * the modal background.
        */
 
       $("#modalCard")
         .addEventListener(
           "click",
           (e) => {
+
             e.stopPropagation();
+
           }
         );
 
 
       /*
-       * Explicit GitHub link handling.
-       *
-       * This is particularly useful on mobile browsers
-       * and embedded WebViews.
+       * Explicit link handling.
        */
 
       $("#mLinks")
@@ -2756,9 +3089,7 @@
         );
 
 
-      /*
-       * Navigation
-       */
+      /* Navigation */
 
       $$("#nav a")
         .forEach(
@@ -2778,9 +3109,7 @@
         );
 
 
-      /*
-       * Brand → Home
-       */
+      /* Brand */
 
       $$(".brand")
         .forEach(
@@ -2800,18 +3129,14 @@
         );
 
 
-      /*
-       * Render content
-       */
+      /* Render */
 
       renderLibrary();
 
       renderProjects();
 
 
-      /*
-       * Start on Home
-       */
+      /* Home */
 
       setActive("home");
 
@@ -2824,9 +3149,5 @@
 
 </body>
 </html>
-
-
-
-
 
 
