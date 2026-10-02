@@ -60,10 +60,7 @@ nav a.active{background:rgba(59,130,246,.12);color:#93c5fd;border-color:rgba(59,
 .section-title{margin:0;font-size:27px;letter-spacing:-.03em;color:#fff}
 .section-subtitle{margin:8px 0 0;color:var(--muted);line-height:1.7;font-size:14px;font-weight:550;max-width:720px}
 
-/* CASE STUDIES */
-.library-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:4px}
-.library-head h2{color:#fff}
-.lib-search{display:none}
+/* EXPERIMENTS & NOTEBOOKS */
 .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:18px;align-items:stretch}
 .card{grid-column:span 4;border-radius:20px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(25,27,31,.98),rgba(18,19,22,.98));box-shadow:var(--shadow-soft);overflow:hidden;transition:.18s ease;display:flex;flex-direction:column;height:100%;cursor:pointer}
 .card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,.28);box-shadow:0 20px 45px rgba(0,0,0,.35)}
@@ -73,6 +70,16 @@ nav a.active{background:rgba(59,130,246,.12);color:#93c5fd;border-color:rgba(59,
 .tag{font-size:11px;padding:5px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);color:rgba(255,255,255,.68);font-weight:700}
 .card .body{padding:13px 15px 15px;display:flex;flex-direction:column;flex:1}
 .kpi{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.09);border:1px solid rgba(59,130,246,.18);color:#93c5fd;padding:8px 10px;border-radius:12px;font-weight:850;font-size:11px;margin-bottom:10px}
+.cards{margin-top:0}
+.card .top .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.card .top .meta .cat-chip{margin-bottom:0}
+.status{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:800;background:rgba(34,197,94,.10);border:1px solid rgba(34,197,94,.24);color:#86efac}
+.status.progress{background:rgba(245,158,11,.10);border-color:rgba(245,158,11,.26);color:#fcd34d}
+.metrics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.metric{padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);font-size:11px;color:var(--muted);font-weight:650}
+.metric b{color:#fff;font-weight:850;margin-right:4px}
+.card .top .cat-chip{margin-bottom:0}
+.card:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
 .card .desc{margin:0;color:var(--muted);line-height:1.75;font-weight:520;text-align:justify;flex:1}
 .footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;color:var(--muted2);font-weight:650;font-size:12px;padding-top:12px}
 
@@ -244,9 +251,9 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
   </a>
   <nav id="nav">
     <a href="#" class="active" data-page="home">Home</a>
-    <a href="#" data-page="Experiments & Notebooks">Experiments & Notebooks </a>
-    <a href="#" data-page="skills">Skills</a>
     <a href="#" data-page="lab">Projects</a>
+    <a href="#" data-page="experiments">Experiments</a>
+    <a href="#" data-page="skills">Skills</a>
     <a href="#" data-page="publications">Publications</a>
   </nav>
 </header>
@@ -269,8 +276,8 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
         <p>As a researcher and project lead, I translate research into practical systems. Through projects such as InviseeAI and ShinyAnonymizer, I have worked on real-world challenges involving healthcare data anonymization, privacy protection, compliance, and responsible AI deployment.</p>
         <p>My goal is to build AI systems that are not only intelligent, but also reliable, explainable, secure, and practical to deploy.</p>
         <div class="home-cta">
-          <a class="btn primary" href="pdf/marios_vardalachakis.pdf" download>⬇ Resume (1 page, PDF)</a>
-          <a class="btn" href="pdf/Marios_Vardalachakis_detailed_CV.pdf" download>⬇ Full CV (detailed, PDF)</a>
+          <a class="btn primary" href="pdf/marios_vardalachakis_resume.pdf" download>⬇ Resume (1 page, PDF)</a>
+          <a class="btn" href="pdf/marios_vardalachakis_cv.pdf" download>⬇ Full CV (detailed, PDF)</a>
         </div>
       </div>
     </div>
@@ -288,17 +295,14 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
   <div id="projectsList"></div>
 </section>
 
-<!-- CASE STUDY LIBRARY -->
-<section class="section" id="library" style="display:none;">
-  <div class="library-head">
-    <h2 style="margin:0">Case Study Library</h2>
-    <div class="lib-search">
-      <input id="q" class="input" placeholder="Search case studies..." />
-      <select id="fIndustry" class="select" aria-label="Industry"><option value="">Industry</option></select>
-      <select id="fUseCase" class="select" aria-label="Use Case"><option value="">Use Case</option></select>
-      <select id="fMethod" class="select" aria-label="Method"><option value="">Method</option></select>
-      <select id="fData" class="select" aria-label="Data Type"><option value="">Data Type</option></select>
-      <button id="clear" class="clear">Clear Filters</button>
+<!-- EXPERIMENTS & NOTEBOOKS -->
+<section class="section" id="experiments" style="display:none;">
+  <div class="projects-intro">
+    <span class="eyebrow">Open Notebooks</span>
+    <h2 class="section-title">Experiments &amp; Notebooks</h2>
+    <p class="section-subtitle">Hands-on machine learning experiments across different datasets and domains. Each one documents the problem, the approach and the results, with the notebook on GitHub.</p>
+    <div class="home-cta" style="margin-top:16px">
+      <a class="btn primary" href="https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis" target="_blank" rel="noopener noreferrer">🐙 All notebooks on GitHub</a>
     </div>
   </div>
   <div class="cards" id="cards"></div>
@@ -430,7 +434,7 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
   <div class="modal-card">
     <div class="modal-head">
       <div>
-        <h3 id="mTitle">Experiments & Notebooks</h3>
+        <h3 id="mTitle">Case Study</h3>
         <div class="tagrow" id="mTags"></div>
         <div class="modal-links" id="mLinks"></div>
       </div>
@@ -467,6 +471,11 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
 const CASES = [
   {
     id:"cs-fraud-ml",
+    status:"Completed",
+    metrics:[],
+    shortTitle:"Privacy-Preserving Fraud Detection",
+    outcome:"Handles extreme class imbalance with GAN-generated fraud samples, then trains with differential privacy and simulated federated learning so raw transactions are never shared.",
+    categoryKey:"ai",
     title:"Fraud Detection using GAN-based Augmentation, Differential Privacy & Federated Learning",
     kpi:"Extreme Class Imbalance • GAN-based Synthetic Augmentation • Differential Privacy • Federated Learning",
     industry:"Finance",
@@ -477,7 +486,7 @@ const CASES = [
     stack:"Python, Pandas, Scikit-learn, PyTorch",
     deployment:"Offline",
     tags:["creditcard.csv","StandardScaler","GAN","Differential Privacy","Federated Learning"],
-    githubUrl:"https://github.com/mariosvard/Privacy-Preserving-Machine-Learning-Case-Studies/tree/main/projects/fraud-detection",
+    githubUrl:"https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/fraud-detection",
     desc:"End-to-end fraud detection for highly imbalanced transactions, combining GAN-based tabular augmentation with privacy-preserving learning (DP + FL) to enable secure collaboration in regulated environments.",
     problem:[
       "Extreme class imbalance between fraudulent and legitimate transactions.",
@@ -499,6 +508,11 @@ const CASES = [
   },
   {
     id:"cs-healthcare",
+    status:"Completed",
+    metrics:[],
+    shortTitle:"Classical Anonymization vs. ML Utility",
+    outcome:"Measures how k-anonymity, l-diversity and t-closeness trade privacy for model utility on a healthcare dataset.",
+    categoryKey:"privacy",
     title:"Data Anonymization Using Traditional Techniques (k-Anonymity, l-Diversity, t-Closeness)",
     kpi:"Privacy–Utility Tradeoff • Utility Retention • Baseline RandomForest",
     industry:"Healthcare",
@@ -509,7 +523,7 @@ const CASES = [
     stack:"Python, Pandas, Scikit-learn",
     deployment:"Offline",
     tags:["healthcare_data.csv","RandomForest","k-Anonymity","l-Diversity","t-Closeness"],
-    githubUrl:"https://github.com/mariosvard/Privacy-Preserving-Machine-Learning-Case-Studies/tree/main/projects/classical-anonymization",
+    githubUrl:"https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/classical-anonymization",
     desc:"Evaluated classic anonymization methods against downstream ML utility to quantify privacy–utility tradeoffs and validate distributional impact in sensitive healthcare datasets.",
     problem:[
       "Tabular datasets often contain quasi-identifiers and sensitive attributes that can lead to re-identification risks.",
@@ -529,6 +543,11 @@ const CASES = [
   },
   {
     id:"cs-iot",
+    status:"Completed",
+    metrics:[],
+    shortTitle:"Smart-Home Sensor Anonymization",
+    outcome:"Transforms smart-home time series with a 1D convolutional autoencoder and tests utility and robustness against FGSM attacks.",
+    categoryKey:"security",
     title:"IoT Deep Learning Anonymization",
     kpi:"1D Convolutional Autoencoder • Reconstruction Error Analysis • Similarity Metrics • FGSM Adversarial Testing",
     industry:"IoT",
@@ -539,7 +558,7 @@ const CASES = [
     stack:"Python, PyTorch, Scikit-learn, scikit-image",
     deployment:"Offline",
     tags:["Sliding Windows","1D CAE","MSE","Cosine Similarity","SSIM","FGSM"],
-    githubUrl:"https://github.com/mariosvard/Privacy-Preserving-Machine-Learning-Case-Studies/tree/main/projects/smart-home-cae",
+    githubUrl:"https://github.com/mariosvard/Privacy_Preserving_Techniques_Notebook_Thesis/tree/main/projects/smart-home-cae",
     desc:"Privacy-aware transformation of smart-home time series using a 1D convolutional autoencoder, evaluated through reconstruction/similarity metrics and downstream task utility.",
     problem:[
       "Smart-home sensor streams may reveal sensitive behavioral patterns.",
@@ -669,9 +688,9 @@ const SKILLS = {
 ========================================================= */
 const PAGES = {
   home:{ message:null },
-  "case-studies":{ message:null },
   skills:{ message:"My technical expertise and professional toolkit." },
   lab:{ message:null },
+  experiments:{ message:null },
   publications:{ message:"My research papers, conference presentations, and academic contributions." }
 };
 
@@ -694,33 +713,51 @@ function escapeAttr(s){
    CASE STUDY CARDS
 ========================================================= */
 function cardHTML(c){
-  const tags = [c.industry, c.useCase, c.method, c.dataType]
-    .filter(Boolean).slice(0,4)
+  const tags = [c.method, c.dataType]
+    .filter(Boolean)
     .map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("");
 
+  const inProgress = (c.status || "").toLowerCase().includes("progress");
+  const status = c.status
+    ? `<span class="status${inProgress ? " progress" : ""}">${escapeHtml(c.status)}</span>` : "";
+
+  const metrics = (c.metrics && c.metrics.length)
+    ? `<div class="metrics">${c.metrics.map(m =>
+        `<span class="metric"><b>${escapeHtml(m.value)}</b>${escapeHtml(m.label)}</span>`).join("")}</div>`
+    : "";
+
   return `
-    <article class="card" data-id="${escapeAttr(c.id)}">
+    <article class="card cat-${escapeAttr(c.categoryKey)}" data-id="${escapeAttr(c.id)}" tabindex="0" role="button" aria-label="Open experiment: ${escapeAttr(c.shortTitle)}">
       <div class="top">
-        <h3>${escapeHtml(c.title)}</h3>
-        <div class="tagrow">${tags}</div>
+        <div class="meta">
+          <span class="cat-chip">${escapeHtml(c.industry)}</span>
+          ${status}
+        </div>
+        <h3>${escapeHtml(c.shortTitle)}</h3>
       </div>
       <div class="body">
-        <div class="kpi">📌 ${escapeHtml(c.kpi)}</div>
-        <p class="desc">${escapeHtml(c.desc)}</p>
+        <p class="desc">${escapeHtml(c.outcome)}</p>
+        ${metrics}
+        <div class="tagrow">${tags}</div>
         <div class="footer">
-          <span>${escapeHtml(c.deployment)} • ${escapeHtml(c.maturity)}</span>
-          <span style="color:#60a5fa;font-weight:900;">Open →</span>
+          <span>${escapeHtml(c.useCase)}</span>
+          <span style="color:#60a5fa;font-weight:900;">View experiment →</span>
         </div>
       </div>
     </article>`;
 }
 
-function renderLibrary(){
+function renderExperiments(){
   const cards = $("#cards");
+  if(!cards) return;
+  // Newest first: put the most recent experiment at the top of the CASES array.
   cards.innerHTML = CASES.map(cardHTML).join("");
-  $$("#cards .card").forEach(el =>
-    el.addEventListener("click", () => openModal(el.dataset.id))
-  );
+  $$("#cards .card").forEach(el => {
+    el.addEventListener("click", () => openModal(el.dataset.id));
+    el.addEventListener("keydown", e => {
+      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openModal(el.dataset.id); }
+    });
+  });
 }
 
 /* =========================================================
@@ -870,7 +907,7 @@ function openModal(id){
 
   const links = [];
   if(c.githubUrl){
-    links.push(`<a class="linkbtn primary" href="${escapeAttr(c.githubUrl)}" target="_blank" rel="noopener noreferrer">🐙 GitHub Repo</a>`);
+    links.push(`<a class="linkbtn primary" href="${escapeAttr(c.githubUrl)}" target="_blank" rel="noopener noreferrer">📓 Open notebook</a>`);
   }
   $("#mLinks").innerHTML = links.join("");
 
@@ -907,17 +944,17 @@ function setActive(page){
 
   const homeIntro     = $("#homeIntro");
   const heroMsg       = $("#heroMsg");
-  const library       = $("#library");
   const publications  = $("#publications");
   const projects      = $("#projects");
+  const experiments   = $("#experiments");
   const mainContent   = $("#content");
   const existingSkills = $("#skillsContent");
 
   if(homeIntro)      homeIntro.style.display = "none";
   if(heroMsg)        heroMsg.style.display = "none";
-  if(library)        library.style.display = "none";
   if(publications)   publications.style.display = "none";
   if(projects)       projects.style.display = "none";
+  if(experiments)    experiments.style.display = "none";
   if(existingSkills) existingSkills.style.display = "none";
 
   if(page === "home"){
@@ -930,12 +967,6 @@ function setActive(page){
   if(msg){
     heroMsg.textContent = msg;
     heroMsg.style.display = "";
-  }
-
-  if(page === "case-studies"){
-    library.style.display = "";
-    library.scrollIntoView({ behavior:"smooth", block:"start" });
-    return;
   }
 
   if(page === "skills"){
@@ -955,6 +986,12 @@ function setActive(page){
   if(page === "lab"){
     projects.style.display = "";
     projects.scrollIntoView({ behavior:"smooth", block:"start" });
+    return;
+  }
+
+  if(page === "experiments"){
+    experiments.style.display = "";
+    experiments.scrollIntoView({ behavior:"smooth", block:"start" });
     return;
   }
 
@@ -995,8 +1032,8 @@ function init(){
     })
   );
 
-  renderLibrary();
   renderProjects();
+  renderExperiments();
   setActive("home");
 }
 
@@ -1004,6 +1041,5 @@ init();
 </script>
 </body>
 </html>
-
 
 
