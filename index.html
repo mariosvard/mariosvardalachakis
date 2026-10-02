@@ -116,8 +116,6 @@ nav a.active{background:rgba(59,130,246,.12);color:#93c5fd;border-color:rgba(59,
 /* featured projects */
 .featured-projects{display:grid;gap:20px}
 .featured-project{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);min-height:390px;border-radius:24px;border:1px solid var(--border);background:linear-gradient(135deg,rgba(27,29,33,.98),rgba(16,17,20,.98));box-shadow:var(--shadow);overflow:hidden;transition:.20s ease}
-.featured-project:nth-child(even){grid-template-columns:minmax(340px,.95fr) minmax(0,1.05fr)}
-.featured-project:nth-child(even) .featured-image{order:-1}
 .featured-project:hover{transform:translateY(-4px);border-color:rgba(var(--c-rgb),.36);box-shadow:0 26px 65px rgba(0,0,0,.42)}
 .featured-content{padding:34px;display:flex;flex-direction:column;justify-content:center}
 .featured-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
@@ -188,8 +186,7 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
 
 /* RESPONSIVE */
 @media (max-width:980px){
-  .featured-project,.featured-project:nth-child(even){grid-template-columns:1fr}
-  .featured-project:nth-child(even) .featured-image{order:0}
+  .featured-project{grid-template-columns:1fr}
   .featured-image{min-height:300px}
   .featured-image img{height:280px}
   .dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -1041,6 +1038,5 @@ init();
 </script>
 </body>
 </html>
-
 
 
