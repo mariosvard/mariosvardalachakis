@@ -181,6 +181,14 @@ nav a.active{background:rgba(59,130,246,.12);color:#93c5fd;border-color:rgba(59,
 .bullets{margin:0;padding-left:18px;color:rgba(255,255,255,.68);font-weight:650;line-height:1.75}
 .note{font-size:12px;color:rgba(255,255,255,.45);font-weight:650;margin-top:10px}
 
+/* CONTACT */
+.contact{margin-top:30px;padding-top:22px;border-top:1px solid var(--border)}
+.contact h4{margin:0 0 12px;font-size:14px;color:#f4f4f5;letter-spacing:-.01em}
+.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+.contact-link{display:inline-flex;align-items:center;gap:9px;padding:8px 12px 8px 8px;min-height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.045);font-weight:800;font-size:13px;color:rgba(255,255,255,.86);transition:.15s ease}
+.contact-link:hover{transform:translateY(-1px);border-color:rgba(59,130,246,.35);background:rgba(255,255,255,.075);color:#fff}
+.contact-badge{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:rgba(59,130,246,.14);border:1px solid rgba(59,130,246,.22);color:#93c5fd;font-size:11px;font-weight:900;font-family:var(--mono)}
+
 /* FOOTER */
 footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;border-top:1px solid var(--border);background:rgba(255,255,255,.018);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
@@ -221,6 +229,7 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
   .dashboard-grid{grid-template-columns:1fr}
   .dashboard-grid .dashboard-card:last-child:nth-child(odd){grid-column:auto}
   .home-cta{width:100%}
+  .contact-links{display:grid;grid-template-columns:1fr 1fr}
   .btn{width:100%;justify-content:center}
   .featured-links .btn{width:auto;flex:1}
   .kv{grid-template-columns:1fr;gap:3px}
@@ -276,6 +285,7 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
           <a class="btn primary" href="pdf/marios_vardalachakis_resume.pdf" download>⬇ Resume (1 page, PDF)</a>
           <a class="btn" href="pdf/marios_vardalachakis_cv.pdf" download>⬇ Full CV (detailed, PDF)</a>
         </div>
+        <div class="contact" id="homeContact"></div>
       </div>
     </div>
   </div>
@@ -681,6 +691,18 @@ const SKILLS = {
 };
 
 /* =========================================================
+   CONTACT LINKS
+   Fill in the url for each entry. Entries with an empty url
+   are not shown, so nothing broken appears on the page.
+========================================================= */
+const CONTACTS = [
+  { label:"LinkedIn",     badge:"in", url:"https://www.linkedin.com/in/mariosvard" },
+  { label:"ResearchGate", badge:"RG", url:"https://www.researchgate.net/profile/Marios-Vardalachakis" },
+  { label:"GitHub",       badge:"GH", url:"https://github.com/mariosggg" },
+  { label:"Email",        badge:"@",  url:"mailto:mariosvardalachakis@gmail.com" }
+];
+
+/* =========================================================
    PAGE COPY
 ========================================================= */
 const PAGES = {
@@ -1000,6 +1022,29 @@ function setActive(page){
 }
 
 /* =========================================================
+   CONTACT
+========================================================= */
+function renderContact(){
+  const items = CONTACTS.filter(c => c.url);
+  if(!items.length) return;
+
+  const external = u => /^https?:/i.test(u);
+  const attrs = c => external(c.url) ? ' target="_blank" rel="noopener noreferrer"' : "";
+
+  const home = $("#homeContact");
+  if(home){
+    home.innerHTML = `
+      <h4>Get in touch</h4>
+      <div class="contact-links">
+        ${items.map(c => `
+          <a class="contact-link" href="${escapeAttr(c.url)}"${attrs(c)}>
+            <span class="contact-badge" aria-hidden="true">${escapeHtml(c.badge)}</span>${escapeHtml(c.label)}
+          </a>`).join("")}
+      </div>`;
+  }
+}
+
+/* =========================================================
    INIT
 ========================================================= */
 function init(){
@@ -1031,6 +1076,7 @@ function init(){
 
   renderProjects();
   renderExperiments();
+  renderContact();
   setActive("home");
 }
 
@@ -1038,5 +1084,6 @@ init();
 </script>
 </body>
 </html>
+
 
 
