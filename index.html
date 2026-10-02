@@ -30,9 +30,7 @@
       --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
     }
 
-    *{
-      box-sizing:border-box;
-    }
+    *{box-sizing:border-box}
 
     body{
       margin:0;
@@ -78,9 +76,7 @@
       backdrop-filter:blur(10px);
     }
 
-    /* =====================================================
-       HEADER
-       ===================================================== */
+    /* HEADER */
 
     header{
       display:flex;
@@ -133,9 +129,7 @@
       color:var(--blue2);
     }
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    /* HERO */
 
     .hero{
       padding:36px 18px 12px;
@@ -199,9 +193,7 @@
       font-weight:520;
     }
 
-    /* =====================================================
-       BUTTONS
-       ===================================================== */
+    /* BUTTONS */
 
     .home-cta{
       display:flex;
@@ -241,9 +233,7 @@
       color:#fff;
     }
 
-    /* =====================================================
-       SECTIONS
-       ===================================================== */
+    /* SECTIONS */
 
     .section{
       padding:22px 18px 4px;
@@ -255,9 +245,7 @@
       letter-spacing:-.01em;
     }
 
-    /* =====================================================
-       CASE STUDY LIBRARY
-       ===================================================== */
+    /* CASE STUDY LIBRARY */
 
     .library-head{
       display:flex;
@@ -373,9 +361,7 @@
       padding-top:12px;
     }
 
-    /* =====================================================
-       SKILLS
-       ===================================================== */
+    /* SKILLS */
 
     .skills-grid{
       display:grid;
@@ -414,9 +400,7 @@
       font-weight:700;
     }
 
-    /* =====================================================
-       PROJECTS
-       ===================================================== */
+    /* PROJECTS */
 
     .projects-grid{
       display:grid;
@@ -525,9 +509,7 @@
       color:#fff;
     }
 
-    /* =====================================================
-       PUBLICATIONS
-       ===================================================== */
+    /* PUBLICATIONS */
 
     .publications-container{
       max-width:900px;
@@ -634,9 +616,7 @@
       content:"🔗";
     }
 
-    /* =====================================================
-       MODAL
-       ===================================================== */
+    /* MODAL */
 
     .modal{
       position:fixed;
@@ -800,9 +780,7 @@
       margin-top:10px;
     }
 
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    /* FOOTER */
 
     footer{
       padding:18px;
@@ -817,9 +795,7 @@
       gap:10px;
     }
 
-    /* =====================================================
-       RESPONSIVE
-       ===================================================== */
+    /* RESPONSIVE */
 
     @media (max-width:980px){
 
@@ -910,10 +886,6 @@
 
     <div class="shell">
 
-      <!-- =====================================================
-           HEADER
-           ===================================================== -->
-
       <header>
 
         <a
@@ -922,58 +894,31 @@
           data-page="home"
           aria-label="Home"
         >
-
           <div>
-
-            <b>
-              Marios Vardalachakis
-            </b>
-
-            <br />
-
-            <span>
-              AI Engineer
-            </span>
-
+            <b>Marios Vardalachakis</b><br />
+            <span>AI Engineer</span>
           </div>
-
         </a>
 
         <nav id="nav">
 
-          <a
-            href="#"
-            class="active"
-            data-page="home"
-          >
+          <a href="#" class="active" data-page="home">
             Home
           </a>
 
-          <a
-            href="#"
-            data-page="case-studies"
-          >
+          <a href="#" data-page="case-studies">
             Case Studies
           </a>
 
-          <a
-            href="#"
-            data-page="skills"
-          >
+          <a href="#" data-page="skills">
             Skills
           </a>
 
-          <a
-            href="#"
-            data-page="lab"
-          >
+          <a href="#" data-page="lab">
             Projects
           </a>
 
-          <a
-            href="#"
-            data-page="publications"
-          >
+          <a href="#" data-page="publications">
             Publications
           </a>
 
@@ -984,9 +929,7 @@
 
       <main id="content">
 
-        <!-- =====================================================
-             HOME
-             ===================================================== -->
+        <!-- HOME -->
 
         <section
           class="hero"
@@ -997,7 +940,6 @@
             id="heroMsg"
             style="display:none;"
           ></p>
-
 
           <div id="homeIntro">
 
@@ -1040,7 +982,6 @@
                   My goal is to build AI systems that are not only intelligent, but also reliable, explainable, secure, and practical to deploy.
                 </p>
 
-
                 <div class="home-cta">
 
                   <a
@@ -1062,9 +1003,7 @@
         </section>
 
 
-        <!-- =====================================================
-             PROJECTS
-             ===================================================== -->
+        <!-- PROJECTS -->
 
         <section
           class="section"
@@ -1084,9 +1023,7 @@
         </section>
 
 
-        <!-- =====================================================
-             CASE STUDIES
-             ===================================================== -->
+        <!-- CASE STUDIES -->
 
         <section
           class="section"
@@ -1168,9 +1105,7 @@
         </section>
 
 
-        <!-- =====================================================
-             PUBLICATIONS
-             ===================================================== -->
+        <!-- PUBLICATIONS -->
 
         <section
           class="section"
@@ -1179,7 +1114,6 @@
         >
 
           <div class="publications-container">
-
 
             <!-- JOURNALS -->
 
@@ -1235,7 +1169,7 @@
               </h3>
 
 
-              <!-- 2026 EEITE - Privacy-Aware ML -->
+              <!-- EEITE 2026 - Privacy-Aware ML -->
 
               <div class="pub-item">
 
@@ -1271,7 +1205,7 @@
               </div>
 
 
-              <!-- 2026 EEITE - Security Framework -->
+              <!-- EEITE 2026 - Security Framework -->
 
               <div class="pub-item">
 
@@ -1295,10 +1229,55 @@
                   2026
                 </div>
 
+                <a
+                  href="https://doi.org/10.1109/EEITE69609.2026.11679676"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >
+                  DOI: 10.1109/EEITE69609.2026.11679676
+                </a>
+
               </div>
 
 
-              <!-- 2025 InviseeAI -->
+              <!-- ICCTA 2025 -->
+
+              <div class="pub-item">
+
+                <span class="pub-year">
+                  2025
+                </span>
+
+                <div class="pub-authors">
+                  M. Vardalachakis, C. Kalloniatis
+                </div>
+
+                <div class="pub-title">
+                  "The Role of Anonymization Techniques in Differential Privacy"
+                </div>
+
+                <div class="pub-venue">
+                  2025 International Conference on Computer Technology Applications (ICCTA)
+                </div>
+
+                <div class="pub-location">
+                  Vienna, Austria • 2025 • pp. 14-18
+                </div>
+
+                <a
+                  href="https://doi.org/10.1109/ICCTA65425.2025.11166256"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >
+                  DOI: 10.1109/ICCTA65425.2025.11166256
+                </a>
+
+              </div>
+
+
+              <!-- IISA 2025 -->
 
               <div class="pub-item">
 
@@ -1334,38 +1313,7 @@
               </div>
 
 
-              <!-- 2025 ICCTA -->
-
-              <div class="pub-item">
-
-                <span class="pub-year">
-                  2025
-                </span>
-
-                <div class="pub-authors">
-                  M. Vardalachakis, C. Kalloniatis
-                </div>
-
-                <div class="pub-title">
-                  "The Role of Anonymization Techniques in Differential Privacy"
-                </div>
-
-                <div class="pub-venue">
-                  11th International Conference on Computer Technology Applications (ICCTA 2025)
-                </div>
-
-                <div class="pub-location">
-                  Vienna, Austria • May 21-23, 2025
-                </div>
-
-                <span class="pub-status">
-                  Accepted • In Press
-                </span>
-
-              </div>
-
-
-              <!-- 2024 CIEES -->
+              <!-- CIEES 2024 -->
 
               <div class="pub-item">
 
@@ -1401,7 +1349,7 @@
               </div>
 
 
-              <!-- 2024 EEITE -->
+              <!-- EEITE 2024 - Future of Privacy -->
 
               <div class="pub-item">
 
@@ -1437,7 +1385,7 @@
               </div>
 
 
-              <!-- 2024 CircuitLib -->
+              <!-- CircuitLib -->
 
               <div class="pub-item">
 
@@ -1473,7 +1421,7 @@
               </div>
 
 
-              <!-- 2023 ICAMCS -->
+              <!-- ICAMCS 2023 -->
 
               <div class="pub-item">
 
@@ -1509,7 +1457,7 @@
               </div>
 
 
-              <!-- 2019 ICT4AWE -->
+              <!-- ICT4AWE 2019 -->
 
               <div class="pub-item">
 
@@ -1553,10 +1501,6 @@
       </main>
 
 
-      <!-- =====================================================
-           FOOTER
-           ===================================================== -->
-
       <footer>
 
         <div>
@@ -1570,9 +1514,7 @@
   </div>
 
 
-  <!-- =====================================================
-       CASE STUDY MODAL
-       ===================================================== -->
+  <!-- MODAL -->
 
   <div
     class="modal"
@@ -1701,9 +1643,7 @@
 
   <script>
 
-    /* =====================================================
-       CASE STUDIES DATA
-       ===================================================== */
+    /* CASE STUDIES */
 
     const CASES = [
 
@@ -1892,10 +1832,6 @@
     ];
 
 
-    /* =====================================================
-       DEFAULT PROJECT IMAGE
-       ===================================================== */
-
     const DEFAULT_PROJECT_IMAGE =
       `data:image/svg+xml;charset=UTF-8,${
         encodeURIComponent(`
@@ -1971,10 +1907,6 @@
         `)
       }`;
 
-
-    /* =====================================================
-       PROJECTS DATA
-       ===================================================== */
 
     const PROJECTS = [
 
@@ -2114,10 +2046,6 @@
     ];
 
 
-    /* =====================================================
-       SKILLS
-       ===================================================== */
-
     const SKILLS = {
 
       "Programming Languages":[
@@ -2162,10 +2090,6 @@
     };
 
 
-    /* =====================================================
-       PAGES
-       ===================================================== */
-
     const PAGES = {
 
       home:{
@@ -2194,13 +2118,10 @@
     };
 
 
-    /* =====================================================
-       HELPERS
-       ===================================================== */
-
     const $ =
       (s) =>
         document.querySelector(s);
+
 
     const $$ =
       (s) =>
@@ -2236,10 +2157,6 @@
 
     }
 
-
-    /* =====================================================
-       CASE STUDY CARD
-       ===================================================== */
 
     function cardHTML(c){
 
@@ -2322,10 +2239,6 @@
     }
 
 
-    /* =====================================================
-       RENDER LIBRARY
-       ===================================================== */
-
     function renderLibrary(){
 
       const cards =
@@ -2383,10 +2296,6 @@
 
     }
 
-
-    /* =====================================================
-       PROJECT HTML
-       ===================================================== */
 
     function projectHTML(p){
 
@@ -2514,10 +2423,6 @@
     }
 
 
-    /* =====================================================
-       RENDER PROJECTS
-       ===================================================== */
-
     function renderProjects(){
 
       const grid =
@@ -2535,10 +2440,6 @@
 
     }
 
-
-    /* =====================================================
-       RENDER SKILLS
-       ===================================================== */
 
     function renderSkills(){
 
@@ -2595,10 +2496,6 @@
 
     }
 
-
-    /* =====================================================
-       OPEN MODAL
-       ===================================================== */
 
     function openModal(id){
 
@@ -2794,10 +2691,6 @@
     }
 
 
-    /* =====================================================
-       CLOSE MODAL
-       ===================================================== */
-
     function closeModal(){
 
       $("#modal")
@@ -2817,10 +2710,6 @@
 
     }
 
-
-    /* =====================================================
-       PAGE NAVIGATION
-       ===================================================== */
 
     function setActive(page){
 
@@ -2994,17 +2883,11 @@
     }
 
 
-    /* =====================================================
-       INITIALIZATION
-       ===================================================== */
-
     function init(){
 
       $("#year").textContent =
         new Date().getFullYear();
 
-
-      /* ESC closes modal */
 
       window.addEventListener(
         "keydown",
@@ -3017,8 +2900,6 @@
         }
       );
 
-
-      /* Close button */
 
       $("#closeModal")
         .addEventListener(
@@ -3034,10 +2915,6 @@
         );
 
 
-      /*
-       * Clicking only the dark background closes modal.
-       */
-
       $("#modal")
         .addEventListener(
           "click",
@@ -3051,11 +2928,6 @@
         );
 
 
-      /*
-       * Prevent modal content clicks from reaching
-       * the modal background.
-       */
-
       $("#modalCard")
         .addEventListener(
           "click",
@@ -3066,10 +2938,6 @@
           }
         );
 
-
-      /*
-       * Explicit link handling.
-       */
 
       $("#mLinks")
         .addEventListener(
@@ -3089,8 +2957,6 @@
         );
 
 
-      /* Navigation */
-
       $$("#nav a")
         .forEach(
           a =>
@@ -3108,8 +2974,6 @@
             )
         );
 
-
-      /* Brand */
 
       $$(".brand")
         .forEach(
@@ -3129,14 +2993,8 @@
         );
 
 
-      /* Render */
-
       renderLibrary();
-
       renderProjects();
-
-
-      /* Home */
 
       setActive("home");
 
@@ -3149,5 +3007,4 @@
 
 </body>
 </html>
-
 
