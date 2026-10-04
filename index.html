@@ -296,7 +296,7 @@ footer{padding:18px;color:rgba(255,255,255,.43);font-weight:650;font-size:12px;b
   <div class="projects-intro">
     <span class="eyebrow">Selected Work</span>
     <h2 class="section-title">Projects &amp; Applied AI Systems</h2>
-    <p class="section-subtitle">Selected work spanning privacy-preserving AI, healthcare data, software engineering, cybersecurity, and interactive data visualization.</p>
+    <p class="section-subtitle">Selected work spanning privacy-preserving AI,software engineering, cybersecurity, and interactive data visualization.</p>
   </div>
   <!-- Rendered by renderProjects(): Featured Projects + Interactive Dashboards -->
   <div id="projectsList"></div>
@@ -866,7 +866,7 @@ function renderProjects(){
           <h3>Featured Projects</h3>
           <span>${featured.length} ${featured.length === 1 ? "project" : "projects"}</span>
         </div>
-        <p class="group-desc">Platforms and research tools for privacy-preserving AI and healthcare data.</p>
+        <p class="group-desc">Platforms for privacy-preserving AI.</p>
         <div class="featured-projects">${featured.map(featuredProjectHTML).join("")}</div>
       </div>`;
   }
