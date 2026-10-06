@@ -123,6 +123,7 @@ nav a.active{background:rgba(59,130,246,.12);color:#93c5fd;border-color:rgba(59,
 .featured-project h3{margin:0 0 14px;font-size:28px;line-height:1.15;letter-spacing:-.035em;color:#fff}
 .featured-project h3 span{display:block;margin-top:6px;font-size:17px;line-height:1.35;letter-spacing:-.01em;color:#a1a1aa;font-weight:650}
 .featured-project .desc{margin:0;max-width:620px;color:var(--muted);font-size:15px;line-height:1.8;font-weight:520}
+.featured-note{margin:12px 0 0;max-width:620px;color:var(--muted2);font-size:13px;line-height:1.6;font-weight:600;font-style:italic}
 .featured-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
 .featured-tag{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.72);font-size:11px;font-weight:750}
 .featured-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
@@ -615,6 +616,7 @@ const PROJECTS = [
     desc:"A privacy-preserving healthcare data platform combining advanced anonymization techniques with secure data processing and analytical workflows. The system explores k-anonymity, l-diversity, t-closeness, differential privacy, secure multiparty computation, and federated learning for privacy-aware healthcare data management.",
     repoUrl:"https://github.com/mariosggg/InviseeAi",
     liveUrl:"",
+    note:"Runs locally (R/Shiny + PostgreSQL). See the paper and repository for details.",
     paperUrl:"https://doi.org/10.1109/IISA66859.2025.11311319",
     imageUrl:"images/1.png"
   },
@@ -629,6 +631,7 @@ const PROJECTS = [
     desc:"A research-driven platform for anonymizing and exploring healthcare data, designed to make privacy-preserving data management accessible to non-expert users while supporting secure analytical workflows.",
     repoUrl:"https://github.com/mariosggg/ShinyAnonymizer",
     liveUrl:"",
+    note:"Runs locally (R/Shiny + PostgreSQL). See the paper and repository for details.",
     paperUrl:"https://doi.org/10.3390/app14166921",
     imageUrl:"images/2.png"
   },
@@ -637,7 +640,7 @@ const PROJECTS = [
     group:"dashboard",
     categoryKey:"data",
     title:"Epsilon Ontology Evaluation System",
-    tags:["Ontologies","Evaluation","Visualization"],
+    tags:["Ontologies","HTML5","CSS3","JavaScript","D3.js","dc.js","Crossfilter"],
     desc:"A web-based ontology evaluation system developed to apply and visualize established ontology evaluation metrics.",
     repoUrl:"https://github.com/mariosggg/Epsilon_Ontology_Evaluation_System",
     liveUrl:"https://mariosggg.github.io/Epsilon_Ontology_Evaluation_System/",
@@ -648,7 +651,7 @@ const PROJECTS = [
     group:"dashboard",
     categoryKey:"data",
     title:"Interactive Cybercrime Dashboard",
-    tags:["Cybersecurity","Analytics","Data Visualization"],
+    tags:["Cybersecurity","HTML5","CSS3","JavaScript","D3.js","dc.js","Crossfilter"],
     desc:"An interactive dashboard for exploring cybercrime complaints, losses, trends, and related analytical indicators.",
     repoUrl:"https://github.com/mariosggg/IncidentResponse",
     liveUrl:"https://mariosggg.github.io/IncidentResponse/",
@@ -659,7 +662,7 @@ const PROJECTS = [
     group:"dashboard",
     categoryKey:"security",
     title:"IIoT Malware Intelligence Dashboard",
-    tags:["IoT","Cybersecurity","Monitoring"],
+    tags:["IoT Security","HTML5","CSS3","JavaScript","D3.js","dc.js","Crossfilter"],
     desc:"An interactive intelligence dashboard for exploring IoT malware incidents, trends, distributions, and security statistics.",
     repoUrl:"https://github.com/mariosggg/IotMalware_Dashboard",
     liveUrl:"https://mariosggg.github.io/IotMalware_Dashboard/",
@@ -670,7 +673,7 @@ const PROJECTS = [
     group:"dashboard",
     categoryKey:"security",
     title:"Sentinel: AI-Assisted Hybrid Threat Intelligence Platform",
-    tags:["Threat Intelligence","Risk Scoring","D3.js","dc.js"],
+    tags:["Threat Intelligence","HTML5","CSS3","JavaScript","D3.js","dc.js","Crossfilter"],
     desc:"An interactive dashboard for exploring and prioritizing hybrid threat intelligence signals. It combines transparent rule-based risk scoring, sentiment and narrative analysis, an activity timeline and a relationship graph, built on synthetic scenarios as a proof of concept.",
     repoUrl:"https://github.com/mariosvard/Sentinel-AI-Assisted-Hybrid-Threat-Intelligence-Platform",
     liveUrl:"https://mariosvard.github.io/Sentinel-AI-Assisted-Hybrid-Threat-Intelligence-Platform/",
@@ -681,7 +684,7 @@ const PROJECTS = [
     group:"dashboard",
     categoryKey:"data",
     title:"RiskSense: Early Regional Health Monitoring",
-    tags:["Health Analytics","Risk Scoring","D3.js","dc.js"],
+    tags:["Health Analytics","HTML5","CSS3","JavaScript","D3.js","dc.js","Crossfilter"],
     desc:"An experimental dashboard for early regional health monitoring. It combines weak environmental and contextual signals such as temperature, tourist density and past incidents into a transparent, confidence-based risk score. It runs on simulated data as a research prototype.",
     repoUrl:"https://github.com/mariosvard/RiskSense",
     liveUrl:"https://mariosvard.github.io/RiskSense/",
@@ -839,6 +842,7 @@ function featuredProjectHTML(p){
           ${p.subtitle ? `<span>${escapeHtml(p.subtitle)}</span>` : ""}
         </h3>
         <p class="desc">${escapeHtml(p.desc)}</p>
+        ${p.note ? `<p class="featured-note">${escapeHtml(p.note)}</p>` : ""}
         <div class="featured-tags">${tags}</div>
         <div class="featured-links">${links.join("")}</div>
       </div>
@@ -1113,4 +1117,3 @@ init();
 </script>
 </body>
 </html>
-
